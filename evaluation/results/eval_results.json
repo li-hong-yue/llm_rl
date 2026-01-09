@@ -1,0 +1,72 @@
+[
+  {
+    "timestamp": "20260108_125037",
+    "config": {
+      "model": "/projects/bfyv/hli48/sft_checkpoints/checkpoint-epoch-3",
+      "dataset": "KbsdJames/Omni-MATH",
+      "verifier": "exact_match"
+    },
+    "metrics": {
+      "total_samples": 5,
+      "correct": 0,
+      "accuracy": 0.0,
+      "average_score": 0.0
+    }
+  },
+  {
+    "timestamp": "20260108_125631",
+    "config": {
+      "model": "/projects/bfyv/hli48/sft_checkpoints/checkpoint-epoch-3",
+      "dataset": "KbsdJames/Omni-MATH",
+      "verifier": "exact_match"
+    },
+    "metrics": {
+      "total_samples": 222,
+      "correct": 0,
+      "accuracy": 0.0,
+      "average_score": 0.0
+    }
+  },
+  {
+    "timestamp": "20260109_013752",
+    "config": {
+      "model": "/projects/bfyv/hli48/sft_checkpoints/checkpoint-epoch-3",
+      "dataset": "KbsdJames/Omni-MATH",
+      "verifier": "exact_match"
+    },
+    "metrics": {
+      "total_samples": 222,
+      "correct": 44,
+      "accuracy": 0.1981981981981982,
+      "average_score": 0.1981981981981982
+    }
+  },
+  {
+    "timestamp": "20260109_020204",
+    "config": {
+      "model": false,
+      "dataset": "KbsdJames/Omni-MATH",
+      "verifier": "exact_match"
+    },
+    "metrics": {
+      "total_samples": 222,
+      "correct": 41,
+      "accuracy": 0.18468468468468469,
+      "average_score": 0.18468468468468469
+    }
+  },
+  {
+    "timestamp": "20260109_121222",
+    "config": {
+      "model": "/projects/bfyv/hli48/sft_math_checkpoints/checkpoint-epoch-3",
+      "dataset": "KbsdJames/Omni-MATH",
+      "verifier": "exact_match"
+    },
+    "metrics": {
+      "total_samples": 222,
+      "correct": 6,
+      "accuracy": 0.02702702702702703,
+      "average_score": 0.02702702702702703
+    }
+  }
+]

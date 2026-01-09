@@ -1,0 +1,42 @@
+# config.yaml
+# Configuration for math evaluation
+
+model:
+  base_model: "Qwen/Qwen3-4B-Instruct-2507"  
+  checkpoint_path: false
+  use_vllm: true  # Use vLLM for inference, false for FSDP
+  tensor_parallel_size: 2  # Number of GPUs for tensor parallelism (vLLM)
+  max_model_len: 4096
+  temperature: 0.7
+  top_p: 0.9
+  max_tokens: 2048
+
+dataset:
+  name: "KbsdJames/Omni-MATH"
+  split: "test"
+  problem_field: "problem"
+  solution_field: "solution"
+  answer_field: "answer"
+  max_length: 4096
+  max_samples: null  # null for all samples, or set a number for testing
+
+evaluation:
+  batch_size: 8
+  num_workers: 4
+  save_path: "./results"
+  log_file: "eval_results.json"
+  save_generations: true
+  
+verifier:
+  type: "exact_match"  # Options: "exact_match", "llm_verifier"
+  # For LLM verifier (e.g., Gemini)
+  api_key_env: "GEMINI_API_KEY"  # Environment variable name for API key
+  model_name: "gemini-3-pro-preview"
+  temperature: 0.0
+  max_retries: 3
+
+system:
+  seed: 42
+  num_gpus: 2
+  distributed_backend: "nccl"
+  log_level: "INFO"

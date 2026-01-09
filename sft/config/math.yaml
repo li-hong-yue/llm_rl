@@ -1,0 +1,41 @@
+model:
+  name: "Qwen/Qwen3-4B-Instruct-2507"  
+  use_flash_attention: true
+  trust_remote_code: true
+  torch_dtype: "bfloat16"
+
+dataset:
+  name: "qwedsacf/competition_math"
+  split: "train"
+  problem_column: "problem"
+  solution_column: "solution"
+  #answer_column: "answer"
+  max_length: 2048
+  train_test_split: 0.95  # 95% train, 5% val
+
+training:
+  output_dir: "/projects/bfyv/hli48/sft_math_checkpoints"
+  num_epochs: 3
+  batch_size_per_device: 2
+  gradient_accumulation_steps: 4
+  learning_rate: 2.0e-5
+  warmup_steps: 100
+  weight_decay: 0.01
+  max_grad_norm: 1.0
+  logging_steps: 10
+  save_steps: 500
+  eval_steps: 500
+  save_total_limit: 3
+  lr_scheduler_type: "cosine"
+  seed: 42
+
+fsdp:
+  enabled: true
+  sharding_strategy: "FULL_SHARD"  # FULL_SHARD, SHARD_GRAD_OP, NO_SHARD
+  state_dict_type: "FULL_STATE_DICT"
+  cpu_offload: false
+
+wandb:
+  enabled: true
+  project: "llm_rl"
+  run_name: null

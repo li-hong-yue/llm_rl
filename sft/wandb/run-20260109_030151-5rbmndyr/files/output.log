@@ -1,0 +1,18 @@
+Starting training...
+
+Epoch 1/3
+Training Epoch 1: 100%|██████████████████████████████████████████████████████████| 2969/2969 [18:51<00:00,  2.62it/s, loss=0.4742, lr=1.59e-05]
+Epoch 1 - Train Loss: 0.5500, Val Loss: 0.4736
+/u/hli48/.local/lib/python3.10/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py:678: FutureWarning: FSDP.state_dict_type() and FSDP.set_state_dict_type() are being deprecated. Please use APIs, get_state_dict() and set_state_dict(), which can support different parallelisms, FSDP1, FSDP2, DDP. API doc: https://pytorch.org/docs/stable/distributed.checkpoint.html#torch.distributed.checkpoint.state_dict.get_state_dict .Tutorial: https://pytorch.org/tutorials/recipes/distributed_checkpoint_recipe.html .
+  warnings.warn(
+Checkpoint saved to /projects/bfyv/hli48/sft_math_checkpoints/checkpoint-epoch-1
+
+Epoch 2/3
+Training Epoch 2: 100%|██████████████████████████████████████████████████████████| 2969/2969 [17:47<00:00,  2.78it/s, loss=0.4538, lr=5.49e-06]
+Epoch 2 - Train Loss: 0.4354, Val Loss: 0.4707
+Checkpoint saved to /projects/bfyv/hli48/sft_math_checkpoints/checkpoint-epoch-2
+
+Epoch 3/3
+Training Epoch 3: 100%|██████████████████████████████████████████████████████████| 2969/2969 [19:45<00:00,  2.50it/s, loss=0.2356, lr=3.93e-10]
+Epoch 3 - Train Loss: 0.3948, Val Loss: 0.4835
+Checkpoint saved to /projects/bfyv/hli48/sft_math_checkpoints/checkpoint-epoch-3

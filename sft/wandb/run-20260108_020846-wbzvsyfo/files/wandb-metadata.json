@@ -1,0 +1,87 @@
+{
+  "os": "Linux-5.14.21-150500.55.65_13.0.73-cray_shasta_c_64k-aarch64-with-glibc2.31",
+  "python": "CPython 3.10.14",
+  "startedAt": "2026-01-08T08:08:46.921038Z",
+  "args": [
+    "--config",
+    "config/default.yaml"
+  ],
+  "program": "/u/hli48/sft/scripts/train.py",
+  "codePath": "scripts/train.py",
+  "codePathLocal": "scripts/train.py",
+  "email": "lhy@stanford.edu",
+  "root": "/u/hli48/sft",
+  "host": "gh089.hsn.cm.delta.internal.ncsa.edu",
+  "executable": "/sw/user/python/miniforge3-pytorch-2.5.0/bin/python3.10",
+  "cpu_count": 288,
+  "cpu_count_logical": 288,
+  "gpu": "NVIDIA GH200 120GB",
+  "gpu_count": 2,
+  "disk": {
+    "/": {
+      "total": "255797690368",
+      "used": "28796977152"
+    }
+  },
+  "memory": {
+    "total": "917469855744"
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA GH200 120GB",
+      "memoryTotal": "102625181696",
+      "cudaCores": 16896,
+      "architecture": "Hopper",
+      "uuid": "GPU-081e3cc6-5cd1-8140-80b2-a77a3c61d3a3"
+    },
+    {
+      "name": "NVIDIA GH200 120GB",
+      "memoryTotal": "102625181696",
+      "cudaCores": 16896,
+      "architecture": "Hopper",
+      "uuid": "GPU-eced6d9e-c26c-dfa8-3a02-5fc415417f0e"
+    }
+  ],
+  "cudaVersion": "12.6",
+  "slurm": {
+    "cluster_name": "delta-gh",
+    "conf": "/var/spool/slurmd/conf-cache/slurm.conf",
+    "cpus_on_node": "8",
+    "export_env": "NONE",
+    "get_user_env": "1",
+    "gpus_on_node": "2",
+    "gtids": "0",
+    "job_account": "bfyv-dtai-gh",
+    "job_cpus_per_node": "8",
+    "job_end_time": "1767863598",
+    "job_gid": "202",
+    "job_gpus": "0,2",
+    "job_id": "1792219",
+    "job_name": "ondemand/sys/dashboard/sys/jupyter-lab",
+    "job_nodelist": "gh089",
+    "job_num_nodes": "1",
+    "job_partition": "ghx4-interactive",
+    "job_qos": "bfyv-dtai-gh",
+    "job_start_time": "1767856398",
+    "job_uid": "91813",
+    "job_user": "hli48",
+    "jobid": "1792219",
+    "localid": "0",
+    "mem_per_node": "81920",
+    "nnodes": "1",
+    "nodeid": "0",
+    "nodelist": "gh089",
+    "nprocs": "8",
+    "ntasks": "8",
+    "oom_kill_step": "0",
+    "prio_process": "0",
+    "procid": "0",
+    "submit_dir": "/var/www/ood/apps/sys/dashboard",
+    "submit_host": "gh-ondemand.delta.ncsa.illinois.edu",
+    "task_pid": "300317",
+    "tasks_per_node": "8",
+    "topology_addr": "deltaai_fabric.chassis_x8103c2.gh089",
+    "topology_addr_pattern": "switch.switch.node"
+  },
+  "writerId": "a4bnrg57rgla7f8kgwdayk8xr073e6ja"
+}

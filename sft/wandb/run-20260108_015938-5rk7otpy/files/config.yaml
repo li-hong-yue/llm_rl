@@ -1,0 +1,149 @@
+_wandb:
+    value:
+        cli_version: 0.23.1
+        e:
+            yshxav90p2nds862yy53c2y69jq67njl:
+                args:
+                    - --config
+                    - config/default.yaml
+                codePath: scripts/train.py
+                codePathLocal: scripts/train.py
+                cpu_count: 288
+                cpu_count_logical: 288
+                cudaVersion: "12.6"
+                disk:
+                    /:
+                        total: "255797690368"
+                        used: "28796780544"
+                email: lhy@stanford.edu
+                executable: /sw/user/python/miniforge3-pytorch-2.5.0/bin/python3.10
+                gpu: NVIDIA GH200 120GB
+                gpu_count: 2
+                gpu_nvidia:
+                    - architecture: Hopper
+                      cudaCores: 16896
+                      memoryTotal: "102625181696"
+                      name: NVIDIA GH200 120GB
+                      uuid: GPU-081e3cc6-5cd1-8140-80b2-a77a3c61d3a3
+                    - architecture: Hopper
+                      cudaCores: 16896
+                      memoryTotal: "102625181696"
+                      name: NVIDIA GH200 120GB
+                      uuid: GPU-eced6d9e-c26c-dfa8-3a02-5fc415417f0e
+                host: gh089.hsn.cm.delta.internal.ncsa.edu
+                memory:
+                    total: "917469855744"
+                os: Linux-5.14.21-150500.55.65_13.0.73-cray_shasta_c_64k-aarch64-with-glibc2.31
+                program: /u/hli48/sft/scripts/train.py
+                python: CPython 3.10.14
+                root: /u/hli48/sft
+                slurm:
+                    cluster_name: delta-gh
+                    conf: /var/spool/slurmd/conf-cache/slurm.conf
+                    cpus_on_node: "8"
+                    export_env: NONE
+                    get_user_env: "1"
+                    gpus_on_node: "2"
+                    gtids: "0"
+                    job_account: bfyv-dtai-gh
+                    job_cpus_per_node: "8"
+                    job_end_time: "1767863598"
+                    job_gid: "202"
+                    job_gpus: 0,2
+                    job_id: "1792219"
+                    job_name: ondemand/sys/dashboard/sys/jupyter-lab
+                    job_nodelist: gh089
+                    job_num_nodes: "1"
+                    job_partition: ghx4-interactive
+                    job_qos: bfyv-dtai-gh
+                    job_start_time: "1767856398"
+                    job_uid: "91813"
+                    job_user: hli48
+                    jobid: "1792219"
+                    localid: "0"
+                    mem_per_node: "81920"
+                    nnodes: "1"
+                    nodeid: "0"
+                    nodelist: gh089
+                    nprocs: "8"
+                    ntasks: "8"
+                    oom_kill_step: "0"
+                    prio_process: "0"
+                    procid: "0"
+                    submit_dir: /var/www/ood/apps/sys/dashboard
+                    submit_host: gh-ondemand.delta.ncsa.illinois.edu
+                    task_pid: "300317"
+                    tasks_per_node: "8"
+                    topology_addr: deltaai_fabric.chassis_x8103c2.gh089
+                    topology_addr_pattern: switch.switch.node
+                startedAt: "2026-01-08T07:59:38.621146Z"
+                writerId: yshxav90p2nds862yy53c2y69jq67njl
+        m: []
+        python_version: 3.10.14
+        t:
+            "1":
+                - 1
+                - 11
+                - 41
+                - 49
+                - 51
+                - 71
+                - 105
+            "2":
+                - 1
+                - 11
+                - 41
+                - 49
+                - 51
+                - 71
+                - 105
+            "3":
+                - 13
+                - 16
+            "4": 3.10.14
+            "5": 0.23.1
+            "6": 4.57.3
+            "12": 0.23.1
+            "13": linux-aarch64
+dataset:
+    value:
+        answer_column: answer
+        max_length: 2048
+        name: KbsdJames/Omni-MATH
+        problem_column: problem
+        solution_column: solution
+        split: test
+        train_test_split: 0.95
+fsdp:
+    value:
+        cpu_offload: false
+        enabled: true
+        sharding_strategy: FULL_SHARD
+        state_dict_type: FULL_STATE_DICT
+model:
+    value:
+        name: Qwen/Qwen3-4B-Instruct-2507
+        torch_dtype: bfloat16
+        trust_remote_code: true
+        use_flash_attention: true
+training:
+    value:
+        batch_size_per_device: 4
+        eval_steps: 500
+        gradient_accumulation_steps: 4
+        learning_rate: 2e-05
+        logging_steps: 10
+        lr_scheduler_type: cosine
+        max_grad_norm: 1
+        num_epochs: 3
+        output_dir: ./sft_checkpoints
+        save_steps: 500
+        save_total_limit: 3
+        seed: 42
+        warmup_steps: 100
+        weight_decay: 0.01
+wandb:
+    value:
+        enabled: true
+        project: llm_rl
+        run_name: null

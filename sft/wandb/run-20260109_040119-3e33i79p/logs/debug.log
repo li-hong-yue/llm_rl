@@ -1,0 +1,21 @@
+2026-01-09 04:01:19,605 INFO    MainThread:1604990 [wandb_setup.py:_flush():80] Current SDK version is 0.23.1
+2026-01-09 04:01:19,605 INFO    MainThread:1604990 [wandb_setup.py:_flush():80] Configure stats pid to 1604990
+2026-01-09 04:01:19,605 INFO    MainThread:1604990 [wandb_setup.py:_flush():80] Loading settings from /u/hli48/.config/wandb/settings
+2026-01-09 04:01:19,605 INFO    MainThread:1604990 [wandb_setup.py:_flush():80] Loading settings from /u/hli48/sft/wandb/settings
+2026-01-09 04:01:19,605 INFO    MainThread:1604990 [wandb_setup.py:_flush():80] Loading settings from environment variables
+2026-01-09 04:01:19,605 INFO    MainThread:1604990 [wandb_init.py:setup_run_log_directory():714] Logging user logs to /u/hli48/sft/wandb/run-20260109_040119-3e33i79p/logs/debug.log
+2026-01-09 04:01:19,605 INFO    MainThread:1604990 [wandb_init.py:setup_run_log_directory():715] Logging internal logs to /u/hli48/sft/wandb/run-20260109_040119-3e33i79p/logs/debug-internal.log
+2026-01-09 04:01:19,605 INFO    MainThread:1604990 [wandb_init.py:init():841] calling init triggers
+2026-01-09 04:01:19,605 INFO    MainThread:1604990 [wandb_init.py:init():846] wandb.init called with sweep_config: {}
+config: {'model': {'name': 'Qwen/Qwen3-4B-Instruct-2507', 'use_flash_attention': True, 'trust_remote_code': True, 'torch_dtype': 'bfloat16'}, 'dataset': {'name': 'qwedsacf/competition_math', 'split': 'train', 'problem_column': 'problem', 'solution_column': 'solution', 'max_length': 2048, 'train_test_split': 0.95}, 'training': {'output_dir': '/projects/bfyv/hli48/sft_math_checkpoints', 'num_epochs': 3, 'batch_size_per_device': 2, 'gradient_accumulation_steps': 4, 'learning_rate': 2e-05, 'warmup_steps': 100, 'weight_decay': 0.01, 'max_grad_norm': 1.0, 'logging_steps': 10, 'save_steps': 500, 'eval_steps': 500, 'save_total_limit': 3, 'lr_scheduler_type': 'cosine', 'seed': 42}, 'fsdp': {'enabled': True, 'sharding_strategy': 'FULL_SHARD', 'state_dict_type': 'FULL_STATE_DICT', 'cpu_offload': False}, 'wandb': {'enabled': True, 'project': 'llm_rl', 'run_name': None}, '_wandb': {}}
+2026-01-09 04:01:19,605 INFO    MainThread:1604990 [wandb_init.py:init():889] starting backend
+2026-01-09 04:01:19,947 INFO    MainThread:1604990 [wandb_init.py:init():892] sending inform_init request
+2026-01-09 04:01:20,115 INFO    MainThread:1604990 [wandb_init.py:init():900] backend started and connected
+2026-01-09 04:01:20,116 INFO    MainThread:1604990 [wandb_init.py:init():970] updated telemetry
+2026-01-09 04:01:20,116 INFO    MainThread:1604990 [wandb_init.py:init():994] communicating run to backend with 90.0 second timeout
+2026-01-09 04:01:20,508 INFO    MainThread:1604990 [wandb_init.py:init():1041] starting run threads in backend
+2026-01-09 04:01:20,858 INFO    MainThread:1604990 [wandb_run.py:_console_start():2521] atexit reg
+2026-01-09 04:01:20,858 INFO    MainThread:1604990 [wandb_run.py:_redirect():2369] redirect: wrap_raw
+2026-01-09 04:01:20,858 INFO    MainThread:1604990 [wandb_run.py:_redirect():2438] Wrapping output streams.
+2026-01-09 04:01:20,858 INFO    MainThread:1604990 [wandb_run.py:_redirect():2461] Redirects installed.
+2026-01-09 04:01:20,863 INFO    MainThread:1604990 [wandb_init.py:init():1081] run started, returning control to user process

@@ -1,0 +1,80 @@
+Starting training...
+
+Epoch 1/3
+Training Epoch 1:   4%|█▎                                 | 116/2969 [00:37<15:12,  3.13it/s, loss=0.6778, lr=4.00e-06]
+Traceback (most recent call last):
+  File "/u/hli48/sft/scripts/train.py", line 41, in <module>
+    main()
+  File "/u/hli48/sft/scripts/train.py", line 36, in main
+    trainer.train()
+  File "/u/hli48/sft/src/trainer.py", line 169, in train
+    train_loss = self._train_epoch(epoch)
+  File "/u/hli48/sft/src/trainer.py", line 209, in _train_epoch
+    outputs = self.model(**batch)
+  File "/u/hli48/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/u/hli48/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/u/hli48/.local/lib/python3.10/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 854, in forward
+    output = self._fsdp_wrapped_module(*args, **kwargs)
+  File "/u/hli48/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/u/hli48/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/u/hli48/.local/lib/python3.10/site-packages/transformers/utils/generic.py", line 918, in wrapper
+    output = func(self, *args, **kwargs)
+  File "/u/hli48/.local/lib/python3.10/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 480, in forward
+    outputs: BaseModelOutputWithPast = self.model(
+  File "/u/hli48/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/u/hli48/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/u/hli48/.local/lib/python3.10/site-packages/transformers/utils/generic.py", line 1072, in wrapper
+    outputs = func(self, *args, **kwargs)
+  File "/u/hli48/.local/lib/python3.10/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 398, in forward
+    "full_attention": create_causal_mask(**mask_kwargs),
+  File "/u/hli48/.local/lib/python3.10/site-packages/transformers/masking_utils.py", line 825, in create_causal_mask
+    causal_mask = mask_interface(
+  File "/u/hli48/.local/lib/python3.10/site-packages/transformers/masking_utils.py", line 374, in sdpa_mask_recent_torch
+    if allow_is_causal_skip and _ignore_causal_mask_sdpa(padding_mask, q_length, kv_length, kv_offset, local_size):
+  File "/u/hli48/.local/lib/python3.10/site-packages/transformers/masking_utils.py", line 255, in _ignore_causal_mask_sdpa
+    if not _is_torch_xpu_available or query_length == 1
+KeyboardInterrupt
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/u/hli48/sft/scripts/train.py", line 41, in <module>
+[rank0]:     main()
+[rank0]:   File "/u/hli48/sft/scripts/train.py", line 36, in main
+[rank0]:     trainer.train()
+[rank0]:   File "/u/hli48/sft/src/trainer.py", line 169, in train
+[rank0]:     train_loss = self._train_epoch(epoch)
+[rank0]:   File "/u/hli48/sft/src/trainer.py", line 209, in _train_epoch
+[rank0]:     outputs = self.model(**batch)
+[rank0]:   File "/u/hli48/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/u/hli48/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/u/hli48/.local/lib/python3.10/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 854, in forward
+[rank0]:     output = self._fsdp_wrapped_module(*args, **kwargs)
+[rank0]:   File "/u/hli48/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/u/hli48/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/u/hli48/.local/lib/python3.10/site-packages/transformers/utils/generic.py", line 918, in wrapper
+[rank0]:     output = func(self, *args, **kwargs)
+[rank0]:   File "/u/hli48/.local/lib/python3.10/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 480, in forward
+[rank0]:     outputs: BaseModelOutputWithPast = self.model(
+[rank0]:   File "/u/hli48/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/u/hli48/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/u/hli48/.local/lib/python3.10/site-packages/transformers/utils/generic.py", line 1072, in wrapper
+[rank0]:     outputs = func(self, *args, **kwargs)
+[rank0]:   File "/u/hli48/.local/lib/python3.10/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 398, in forward
+[rank0]:     "full_attention": create_causal_mask(**mask_kwargs),
+[rank0]:   File "/u/hli48/.local/lib/python3.10/site-packages/transformers/masking_utils.py", line 825, in create_causal_mask
+[rank0]:     causal_mask = mask_interface(
+[rank0]:   File "/u/hli48/.local/lib/python3.10/site-packages/transformers/masking_utils.py", line 374, in sdpa_mask_recent_torch
+[rank0]:     if allow_is_causal_skip and _ignore_causal_mask_sdpa(padding_mask, q_length, kv_length, kv_offset, local_size):
+[rank0]:   File "/u/hli48/.local/lib/python3.10/site-packages/transformers/masking_utils.py", line 255, in _ignore_causal_mask_sdpa
+[rank0]:     if not _is_torch_xpu_available or query_length == 1
+[rank0]: KeyboardInterrupt
